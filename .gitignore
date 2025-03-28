@@ -1,0 +1,5 @@
+garbage/
+__pycache__/
+temp/
+functions*.py
+data/processed/
