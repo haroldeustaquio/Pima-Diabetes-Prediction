@@ -6,7 +6,7 @@ from itertools import product
 
 reload(f)
 
-df_original = pd.read_csv('../data/original/data.csv')
+df_original = pd.read_csv('../data/original.csv')
 
 df_original[['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']] = df_original[['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']].replace(0, np.nan)
 df_original.columns = df_original.columns.str.lower()
@@ -44,7 +44,7 @@ for remove_outliers, balance_data, scale_data in options:
     
     # Construir un nombre de archivo descriptivo
     filename = (
-        f"../data/processed/data_remove_{'yes' if remove_outliers else 'no'}_"
+        f"../data/processed_tmp/data_remove_{'yes' if remove_outliers else 'no'}_"
         f"balance_{'yes' if balance_data else 'no'}_"
         f"scale_{'yes' if scale_data else 'no'}.csv"
     )

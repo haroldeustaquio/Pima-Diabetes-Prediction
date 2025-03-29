@@ -29,7 +29,7 @@ pipeline = Pipeline([
     ('classifier', rf_model)
 ])
 
-df = pd.read_csv('../data/processed/data_remove_yes_balance_yes_scale_no.csv')
+df = pd.read_csv('../data/processed.csv')
 
 X = df.drop(columns='outcome')
 y = df['outcome']
