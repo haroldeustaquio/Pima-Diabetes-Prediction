@@ -1,7 +1,7 @@
 from importlib import reload
 import pandas as pd
 import numpy as np
-import scripts.functions_preprocessing as f
+import functions_preprocessing as f
 from itertools import product
 
 reload(f)
@@ -32,6 +32,10 @@ for remove_outliers, balance_data, scale_data in options:
         y = df['outcome']
         balancing_recommendation = f.data_balancing_oversampling_recommender(X, y, soft=False)
         df = f.apply_balancing_oversampling(X, y, balancing_recommendation)
+    
+        X = df.drop(columns='outcome')
+        y = df['outcome']
+        df = f.apply_balancing_oversampling(X, y, recommendation="RandomOverSampler", target_counts={0: 500, 1: 500})
     
     # 4. Escalar las características (si se selecciona)
     if scale_data:

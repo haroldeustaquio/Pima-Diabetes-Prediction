@@ -22,7 +22,7 @@ preprocessor = ColumnTransformer(
 )
 
 # From notebooks/03_model_optimization.ipynb
-rf_model = RandomForestClassifier(max_depth=15, min_samples_leaf=4, n_estimators=50, random_state=42)
+rf_model = joblib.load('../models/best_model.pkl')
 
 pipeline = Pipeline([
     ('preprocessor', preprocessor),
