@@ -2,4 +2,4 @@ garbage/
 __pycache__/
 temp/
 functions*.py
-data/processed/
+data/processed_tmp/
