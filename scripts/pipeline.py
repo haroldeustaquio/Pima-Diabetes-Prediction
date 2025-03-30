@@ -5,6 +5,7 @@ from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import SimpleImputer, IterativeImputer
 from sklearn.ensemble import RandomForestClassifier
 import joblib
+import cloudpickle
 
 # From notebooks/01_data_preprocessing.ipynb
 simple_cols = ['glucose', 'bloodpressure', 'insulin']
@@ -36,5 +37,6 @@ y = df['outcome']
 
 pipeline.fit(X, y)
 
-# Save the pipeline
-joblib.dump(pipeline, '../models/pipeline.pkl')
+
+joblib.dump(pipeline, "../models/pipeline.joblib")
+joblib.dump(pipeline, "../docker/app/pipeline.joblib")
