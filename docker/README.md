@@ -1,4 +1,4 @@
-# Pima Diabetes Prediction API 
+# Deployment
 
 ## Overview
 
@@ -18,7 +18,7 @@
 
 <figure>
     <img src="https://github.com/user-attachments/assets/3e88c0c9-806a-4daf-a9fa-fde3e683ebcc" alt="Captioned Image">
-    <figcaption>Architecture of the API, deploy in Docker and AWS</figcaption>
+    <figcaption>Deployment Architecture using AWS and Docker</figcaption>
 </figure>
 
 </div>
@@ -30,14 +30,14 @@
 Built with FastAPI, the API exposes:
 
 **GET /**
-- Health check: Returns {"message": "hola harold"}.
+Health check: Returns {"message": "hola harold"}.
 
 **POST /predict**
-- Accepts a JSON payload with features (list of 8 numerical values).
+Accepts a JSON payload with features (list of 8 numerical values).
 Returns {"prediction": 0/1}.
 
 **POST /predict_proba**
-- Returns probability scores for both classes, e.g., {"prediction_proba": [0.2, 0.8]}
+Returns probability scores for both classes, e.g., {"prediction_proba": [0.2, 0.8]}
 
 ---
 
@@ -84,6 +84,3 @@ eb create diabetes-env
 
 4. **Access the deployed API**
 
-Use the generated URL
-
----
