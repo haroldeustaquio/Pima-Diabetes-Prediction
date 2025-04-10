@@ -1,5 +1,12 @@
 # Pime Diabetes Prediction
 
+
+<figure>
+    <img src="https://github.com/user-attachments/assets/d3f34bb6-e325-4c6a-beb2-6cfe27bb1246" alt="Captioned Image">
+</figure>
+
+
+
 ## Overview
 
 This project implements a complete machine learning pipeline to predict diabetes risk using the Pima Indians dataset. It covers data preprocessing, model building, validation, optimization, and deployment via a FastAPI-based API.
