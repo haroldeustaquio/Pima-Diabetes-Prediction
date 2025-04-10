@@ -52,3 +52,8 @@ Diagrams illustrate the ML pipeline architecture and best model performance.
 - **Deployment Methods:**  
   Includes instructions for local Docker deployment and scalable deployment on AWS Elastic Beanstalk.
 
+---
+
+## Contributing
+
+We welcome contributions! If you have ideas, improvements, or fixes, please feel free to fork the repository and submit pull requests. Your involvement helps make this project even better.
